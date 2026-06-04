@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xpense - Student Expense Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- SPLASH SCREEN -->
+
+<div id="loader">
+
+<h1 class="logo">
+₹Xpense
+</h1>
+
+<p>Student Expense Tracker</p>
+
+</div>
+
+<!-- MAIN -->
+
+<section class="hero">
+
+<div class="glass">
+
+<h1>₹Xpense</h1>
+
+<p>
+Track every rupee.
+Save smarter.
+Live better.
+</p>
+
+<button onclick="scrollToDashboard()">
+Get Started
+</button>
+
+</div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<h2>Your Dashboard</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Balance</h3>
+<h1 id="balance">₹0</h1>
+</div>
+
+<div class="card">
+<h3>Total Expenses</h3>
+<h1 id="totalExpense">₹0</h1>
+</div>
+
+<div class="card">
+<h3>Transactions</h3>
+<h1 id="count">0</h1>
+</div>
+
+</div>
+
+<!-- CATEGORY -->
+
+<h2>Categories</h2>
+
+<div class="categories">
+
+<div class="category">🍜 Food</div>
+<div class="category">🚌 Travel</div>
+<div class="category">📚 Books</div>
+<div class="category">🎮 Fun</div>
+<div class="category">📦 Others</div>
+
+</div>
+
+<!-- FORM -->
+
+<div class="expenseBox">
+
+<h2>Add Expense</h2>
+
+<input type="number" id="amount" placeholder="Enter Amount">
+
+<input type="text" id="title" placeholder="Expense Description">
+
+<select id="category">
+
+<option>Food</option>
+<option>Travel</option>
+<option>Books</option>
+<option>Fun</option>
+<option>Others</option>
+
+</select>
+
+<button onclick="addExpense()">
++ Add Expense
+</button>
+
+</div>
+
+<!-- HISTORY -->
+
+<div class="history">
+
+<h2>Expense History</h2>
+
+<ul id="list"></ul>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
